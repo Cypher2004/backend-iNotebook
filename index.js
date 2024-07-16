@@ -7,11 +7,15 @@ const app = express()
 
 const port = process.env.PORT || 4000;
 console.log("PORT :" + process.env.PORT );
-const mongoURI = process.env.MONGODB_URI;
 
 
-console.log('Mongo URI:', mongoURI);
-app.use(cors())
+const corsOptions = {
+  origin: '*', // Replace with your frontend origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+app.use(cors(corsOptions))
 app.use(express.json())
 // Available Routes
 app.use('/api/auth',require('./routes/auth'))
