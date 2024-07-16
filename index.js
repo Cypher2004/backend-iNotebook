@@ -10,7 +10,7 @@ console.log("PORT :" + process.env.PORT );
 
 
 const corsOptions = {
-  origin: '*', // Replace with your frontend origin
+  origin: 'https://frontend-i-notebook-i3snhb2a9-cypher2004s-projects.vercel.app', // Replace with your frontend origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204
